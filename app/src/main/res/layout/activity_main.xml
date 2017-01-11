@@ -12,7 +12,22 @@
     tools:context="com.example.tusar.helloworld.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Welcome To MainActivity"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"/>
+
+    <Button
+        android:text="Click TO Start Local BROADCAST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="169dp"
+        android:id="@+id/button" />
+
 </RelativeLayout>
