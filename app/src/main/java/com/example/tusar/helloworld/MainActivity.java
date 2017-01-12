@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button b1=(Button)findViewById(R.id.button);
+        Button b1 = (Button) findViewById(R.id.button);
         b1.setOnClickListener(this);
     }
 
@@ -22,15 +22,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
         sendBroadcast();
-        startActivity(new Intent(MainActivity.this,ActivityOne.class));
+        startActivity(new Intent(MainActivity.this, ActivityOne.class));
     }
 
     private void sendBroadcast() {
 
-        Intent i=new Intent("send");
-        i.putExtra("Currnet speed","102.4");
-        i.putExtra("latitude","12.2342342");
-        i.putExtra("longitude","12.21124");
+        Intent i = new Intent("send");
+        i.putExtra("Currnet speed", "102.4");
+        i.putExtra("latitude", "12.2342342");
+        i.putExtra("longitude", "12.21124");
         LocalBroadcastManager.getInstance(this).sendBroadcast(i);
     }
 }

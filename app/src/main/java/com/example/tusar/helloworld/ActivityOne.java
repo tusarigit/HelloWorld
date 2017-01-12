@@ -17,7 +17,7 @@ public class ActivityOne extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
-        Toast.makeText(ActivityOne.this,"onCreate();",Toast.LENGTH_LONG).show();
+
         speed = (TextView) findViewById(R.id.textView1);
         latitude = (TextView) findViewById(R.id.textView2);
         longitude = (TextView) findViewById(R.id.textView3);
@@ -45,7 +45,7 @@ public class ActivityOne extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(ActivityOne.this,"onResume();",Toast.LENGTH_LONG).show();
+
         LocalBroadcastManager.getInstance(this).registerReceiver(message, new IntentFilter("send"));
 
     }
@@ -55,7 +55,7 @@ public class ActivityOne extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         LocalBroadcastManager.getInstance(this).unregisterReceiver(message);
-        Toast.makeText(ActivityOne.this,"onPause();",Toast.LENGTH_LONG).show();
+
     }
 
 
